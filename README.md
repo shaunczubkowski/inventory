@@ -1,4 +1,5 @@
 # Inventory
+A web application that keeps track of an Ebay store's inventory.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
 
