@@ -1,0 +1,98 @@
+<h1>Manage Item</h1>
+<p>Add an item to your inventory or edit an existing item.</p>
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col">
+      <label for="item-id">My Item ID</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="My Item Id"
+        formControlName="itemId"
+        id="item-id"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="company-part-id">Company Part ID</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Company Part Id"
+        formControlName="companyPartId"
+        id="company-part-id"
+      />
+    </div>
+    <div class="col">
+      <label for="company-name">Company Name</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Company Name"
+        formControlName="companyName"
+        id="company-name"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="item-description">Item Description</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Item Description"
+        formControlName="itemDescription"
+        id="item-description"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="quantity">Quantity</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Quantity"
+        formControlName="quantity"
+      />
+    </div>
+    <div class="col">
+      <label for="cost">Cost</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Cost"
+        formControlName="cost"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label class="mr-3">Surplus Item?</label>
+      <label class="mr-3">
+        <input
+          class="mr-1"
+          type="radio"
+          value="Yes"
+          formControlName="isSurplus"
+        />
+        <span>Yes</span>
+      </label>
+      <label>
+        <input
+          class="mr-1"
+          type="radio"
+          value="No"
+          formControlName="isSurplus"
+        />
+        <span>No</span>
+      </label>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success btn-lg m-1">Add Item</button>
+  <button type="reset" class="btn btn-danger btn-lg m-1">Reset</button>
+</form>
